@@ -1,0 +1,109 @@
+2019-04-15 00:06:17 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Driver.php on line 92
+Stack Trace:
+#0 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Driver.php(92): PDO->__construct('mysql:host=loca...', 'my_app', 'secret', Array)
+#1 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Connection.php(391): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1092): Cake\Database\Connection->getSchemaCollection()
+#8 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1046): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(213): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'usuarios', 'Usuarios')
+#12 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Usuarios')
+#13 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Usuarios')
+#14 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Usuarios', 0)
+#15 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#16 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('usuarios')
+#17 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\CommandRunner.php(367): Cake\Console\Shell->runCommand(Array, true)
+#18 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#19 C:\cakephp\ej_INASE\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#20 {main}
+
+
+2019-04-15 03:35:02 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ej_inase.admins' doesn't exist in C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'admins', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('admins', Array)
+#2 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\ORM\Table.php(555): Cake\Database\Schema\CachedCollection->describe('admins')
+#3 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\ORM\Table.php(680): Cake\ORM\Table->getSchema()
+#4 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'admins', 'Admins')
+#7 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Admins')
+#8 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ModelTask->main('admins')
+#9 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\CommandRunner.php(367): Cake\Console\Shell->runCommand(Array, true)
+#11 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#12 C:\cakephp\ej_INASE\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ej_inase.admins' doesn't exist in C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(129): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'admins', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('admins', Array)
+#10 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\ORM\Table.php(555): Cake\Database\Schema\CachedCollection->describe('admins')
+#11 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\ORM\Table.php(680): Cake\ORM\Table->getSchema()
+#12 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'admins', 'Admins')
+#15 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Admins')
+#16 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ModelTask->main('admins')
+#17 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#18 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\CommandRunner.php(367): Cake\Console\Shell->runCommand(Array, true)
+#19 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#20 C:\cakephp\ej_INASE\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2019-04-15 03:35:27 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ej_inase.admins' doesn't exist in C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'admins', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('admins', Array)
+#2 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\ORM\Table.php(555): Cake\Database\Schema\CachedCollection->describe('admins')
+#3 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\ORM\Table.php(680): Cake\ORM\Table->getSchema()
+#4 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('admins')
+#7 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#8 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\CommandRunner.php(367): Cake\Console\Shell->runCommand(Array, true)
+#9 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#10 C:\cakephp\ej_INASE\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#11 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ej_inase.admins' doesn't exist in C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(129): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'admins', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('admins', Array)
+#10 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\ORM\Table.php(555): Cake\Database\Schema\CachedCollection->describe('admins')
+#11 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\ORM\Table.php(680): Cake\ORM\Table->getSchema()
+#12 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#13 C:\cakephp\ej_INASE\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#14 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('admins')
+#15 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#16 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\CommandRunner.php(367): Cake\Console\Shell->runCommand(Array, true)
+#17 C:\cakephp\ej_INASE\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#18 C:\cakephp\ej_INASE\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#19 {main}
+
+
