@@ -49,7 +49,7 @@ configuration relevant for your application.
 
 ## Base de datos
 
-crear base llamada cake_db
+crear base llamada ej_inase
 
 agregar tabla:
 CREATE TABLE `usuarios` (
