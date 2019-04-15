@@ -1,4 +1,7 @@
-# CakePHP Application Skeleton
+# EJERCICIO INASE
+
+Proyecto básico en cakephp, donde se pueda dar de alta, editar y eliminar usuarios.
+
 
 [![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
 [![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
@@ -44,8 +47,23 @@ automated upgrades, so you have to do any updates manually.
 Read and edit `config/app.php` and setup the `'Datasources'` and any other
 configuration relevant for your application.
 
-## Layout
+## Base de datos
 
-The app skeleton uses a subset of [Foundation](http://foundation.zurb.com/) (v5) CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+crear base llamada cake_db
+
+agregar tabla:
+CREATE TABLE `usuarios` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`nombre` VARCHAR(80) NOT NULL,
+`apellido` VARCHAR(80) NOT NULL,
+`cuit` VARCHAR(11) NOT NULL,
+`nickname` VARCHAR(45) NOT NULL,
+`email` VARCHAR(100) NOT NULL,
+PRIMARY KEY (`id`),
+UNIQUE INDEX `nickname_UNIQUE` (`nickname` ASC));
+
+# Test
+
+Para testear la pagina ingresar a `http://localhost:8765/Usuarios/index`
+
+
